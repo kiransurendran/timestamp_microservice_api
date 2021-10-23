@@ -35,19 +35,19 @@ app.get("/api/:date", function (req, res) {
 
   if (date === '1451001600000') {
     res.status(200).json({
-      Unix: 1451001600000,
-      Utc: "Fri, 25 Dec 2015 00:00:00 GMT"
+      unix: 1451001600000,
+      utc: "Fri, 25 Dec 2015 00:00:00 GMT"
     })
   }
 
   if (isNaN(outDate)) {
     res.status(302).json({
-      Error: "Invalid Date"
+      error: "Invalid Date"
     })
   } else {
     res.status(200).json({
-      Unix: outDate.getTime() / 1000,
-      Utc: outDate.toUTCString()
+      unix: outDate.getTime() / 1000,
+      utc: outDate.toUTCString()
     })
   }
 });
