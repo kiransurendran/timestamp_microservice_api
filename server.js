@@ -47,7 +47,7 @@ app.get("/api/:date", function (req, res) {
   } else {
     res.status(200).json({
       unix: outDate.getTime() / 1000,
-      utc: outDate.toString()
+      utc: outDate.toUTCString()
     })
   }
 });
