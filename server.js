@@ -30,8 +30,8 @@ app.get("/api/hello", function (req, res) {
 
 app.get("/api/:date", function (req, res) {
   // res.json({ greeting: 'hello API' });
-  var { date } = req.params
-  const outDate = new Date(date)
+  var date_string = req.params.date
+  const outDate = new Date(date_string)
 
   if (date === '1451001600000') {
     res.status(200).json({
