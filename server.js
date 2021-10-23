@@ -55,7 +55,7 @@ app.get("/api/:date", function (req, res) {
 
 app.get("/api", function (req, res) {
   res.status(200).json({
-    unix: new Date().getTime() / 1000,
+    unix: new Date().getTime(),
     utc: new Date().toString()
   })
 });
