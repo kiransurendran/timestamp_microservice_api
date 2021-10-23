@@ -42,12 +42,12 @@ app.get("/api/:date", function (req, res) {
 
   if (isNaN(outDate)) {
     res.status(302).json({
-      error: "Invalid Date"
+      Error: "Invalid Date"
     })
   } else {
     res.status(200).json({
-      unix: outDate.getTime() / 1000,
-      utc: outDate.toUTCString()
+      Unix: outDate.getTime() / 1000,
+      Utc: outDate.toUTCString()
     })
   }
 });
