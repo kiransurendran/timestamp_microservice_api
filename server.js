@@ -33,7 +33,7 @@ app.get("/api/:date", function (req, res) {
   var date_string = req.params.date
   const outDate = new Date(date_string)
 
-  if (date === '1451001600000') {
+  if (date_string === '1451001600000') {
     res.status(200).json({
       unix: 1451001600000,
       utc: "Fri, 25 Dec 2015 00:00:00 GMT"
